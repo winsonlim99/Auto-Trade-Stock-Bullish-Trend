@@ -1,0 +1,17 @@
+paper_only: true
+initial_equity: 10000
+ui_timezone: Asia/Singapore
+market_timezone: America/New_York
+auto_enabled: false
+provider: offline_csv
+moomoo_enabled: false
+risk_per_setup: 0.005
+max_daily_drawdown: 0.015
+max_open_risk: 0.015
+max_industry_exposure: 0.30
+max_positions: 2
+max_trades_per_day: 4
+max_consecutive_losses: 3
+intraday_enabled: false
+swing_enabled: false
+
