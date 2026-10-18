@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{ title }} | AutoTrade V1.0</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,sans-serif;background:#101722;color:#e4eaf2}
+body{margin:0}header{padding:22px 30px;background:#1b293b;border-bottom:3px solid #f4be53}
+h1{margin:0 0 8px;font-size:26px}.badge{color:#f4be53;font-weight:700}small{display:block;margin-top:8px;color:#b5c4d7}
+.layout{display:flex;min-height:70vh}nav{width:225px;padding:20px;background:#142032}nav a{display:block;color:#c5d3e5;padding:10px;text-decoration:none;border-radius:6px}nav a[aria-current=page]{background:#28415f;color:white}
+main{padding:24px 32px;max-width:1000px;min-width:0;flex:1}.notice{padding:16px;background:#3a301e;border:1px solid #8b6d35;border-radius:8px;line-height:1.6}pre{padding:20px;background:#182638;overflow:auto;border-radius:8px;white-space:pre-wrap}dt{font-weight:700;margin-top:14px}dd{margin:4px 0;color:#b5c4d7}button{padding:12px;margin-top:18px}footer{padding:20px 30px;color:#b5c4d7}@media(max-width:700px){.layout{display:block}nav{width:auto;display:flex;flex-wrap:wrap}main{padding:18px}}
+</style></head><body>
+<header><h1>AutoTrade V1.0</h1><span class="badge">PAPER ONLY · SYNTHETIC / OFFLINE · SESSION OFF</span>
+<small>ET {{ et }} · UI {{ sgt }}</small></header>
+<div class="layout"><nav aria-label="Main navigation">{% for key,label in pages.items() %}<a href="/page/{{ key }}" {% if key == page %}aria-current="page"{% endif %}>{{ label }}</a>{% endfor %}</nav>
+<main><h2>{{ title }}</h2><div class="notice">Milestone 1 foundation. Historical synthetic data is stale for trading. All entries are blocked. The USD 10,000 local ledger is independent of any Moomoo simulated account.</div>
+<button disabled title="Requires later milestone risk, data and protective execution gates">Enable simulated session — blocked</button>
+<pre>{{ data }}</pre><h3>Data coverage and limitations</h3><dl>{% for key,value in quality.items() %}<dt>{{ key }}</dt><dd>{{ value }}</dd>{% endfor %}</dl>
+</main></div><footer>No live order paths. Stops are not fill guarantees. App-managed protection cannot operate while the computer or connection is down. This milestone does not execute protective exits.</footer></body></html>
